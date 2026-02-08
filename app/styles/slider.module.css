@@ -1,0 +1,18 @@
+.slidersection{
+    height: 100%;
+    width: 50%;
+}
+.imageContainer{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.slider{
+    opacity: 0;
+    transition: 1 ease;
+    object-fit: cover;
+    
+}
+.active{
+    opacity: 1;
+}

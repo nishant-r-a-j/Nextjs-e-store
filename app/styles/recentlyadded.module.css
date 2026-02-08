@@ -1,0 +1,23 @@
+.container{
+    height: 100%;
+    width: 100%;
+}
+.head{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.boxcontainer{
+    height: 60%;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    
+}

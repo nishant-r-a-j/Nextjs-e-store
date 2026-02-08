@@ -1,0 +1,19 @@
+.storecontainer{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+}
+.catcontainer{
+    width:30%;
+    margin: 2%;
+}
+
+.productcont{
+    padding: 10px;
+    width:70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

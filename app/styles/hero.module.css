@@ -1,0 +1,32 @@
+.herosection{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    text-align: start;
+
+}
+.herodescription{
+width: 80%;
+}
+
+.herofont{
+    font-size: 40px;
+    font-weight: 700;
+}
+.herotexts{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.herotexts button{
+    height: 40px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: rgb(45, 44, 44);
+    cursor: pointer;
+}
