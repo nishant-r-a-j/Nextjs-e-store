@@ -4,37 +4,14 @@ import { getCategories, getProducts } from "../library";
 import ProductBox from "@/components/productbox";
 import Catbox from "@/components/catbox";
 
-export default async function StorePage(){
-    return (
-        <>
-        <Storecompcont category={<Categorylisting/>} product={<Productlisting/>}>
-        </Storecompcont>
-        </>
-    )
-}
+export default async function StorePage() {
+  const categories = await getCategories();
+  const products = await getProducts();
 
-const Categorylisting=async()=>{
-    const data=await getCategories();
-    // return new Error("something went wrong");
-    return (
-        <>
-        <>{
-            data.map((cat,idx)=>{
-                return <Catbox key={idx}>{cat}</Catbox>
-            })
-            }</>
-        </>
-    )
-}
-const Productlisting=async()=>{
-    const data=await getProducts();
-      return (
-        <>
-        <>{
-            data.map((prod)=>{
-                return  <ProductBox key={prod.id} product={prod}></ProductBox>
-            })
-            }</>
-        </>
-    )
+  const categoryListJSX = categories.map((cat, idx) => <Catbox key={idx}>{cat}</Catbox>);
+  const productListJSX = products.map((prod) => <ProductBox key={prod.id} product={prod} />);
+
+  return (
+    <Storecompcont category={categoryListJSX} product={productListJSX} />
+  );
 }
