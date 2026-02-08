@@ -7,6 +7,11 @@ const getProducts = async (product_id=null) => {
   const res = await fetch(API, {
     cache: 'no-store', // SSR on every request
   });
+ // ✅ IMPORTANT: protect JSON parsing
+  if (!res.ok) {
+    console.error("Fetch failed:", API, res.status);
+    return null; // never crash build
+  }
 
   return res.json();
 };
